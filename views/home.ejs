@@ -1,0 +1,31 @@
+<!-- home.ejs -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page - 2</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">
+          <img src="https://i.gifer.com/XfQ8.gif">  
+          <%= user.email %></h5>
+        <form action="/logout" method="POST">
+          <button type="submit" class="btn btn-primary">Logout</button>
+        </form>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>

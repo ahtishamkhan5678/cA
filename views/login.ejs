@@ -1,0 +1,42 @@
+<!-- login.ejs -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login Page - 1</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div class="card" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Login Page - 1</h5>
+        <h6 style="color: red;">Used Crediential From Database to Login</h6>
+        <% if (error) { %>
+        <p class="text-danger"><%= error %></p>
+        <% } %>
+        <form action="/login" method="POST">
+          <div class="form-group">
+            <label for="email">Email ID:</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" class="form-control" id="password" name="password" required>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  </body>
+</html>
